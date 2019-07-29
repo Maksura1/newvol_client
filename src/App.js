@@ -1,13 +1,20 @@
-import React from 'react';
-
+import React, {Component} from 'react'
 import './App.css';
+import Sidebar from './Sidebar'
+import Content from './Content'
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+class App extends Component {
+	// Data
+	// Functions
+	// Render
+	render() {
+		return (
+			<div id="wrap">
+				<Sidebar />
+				<Content />
+			</div>
+		)
+	}
 }
 
 export default App;
