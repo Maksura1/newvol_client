@@ -30,7 +30,7 @@ class Content extends Component {
 <div id="flashcard">
 {
 	this.state.flashcards.map((f) => {
-		return <Flashcard />
+		return <Flashcard flashcard={f} />
 	})
 }
 

@@ -13,14 +13,13 @@ class Flashcard extends Component {
 				 <div className="card">
 
 			       <div className="card_front">
-			        <h1 className="word">Abhor</h1>
+			        <h1 className="word">{this.props.flashcard.word}</h1>
 			       </div>
 
 			    <div className="card_back">
 			      <div className="image"> </div>
-			      <div className="definition">This is the definition of the word. I need to add more words to test how it workss!
-						adaa dhfaerh akhsdfehn </div>
-						<div className="sentence"> This is a sentence usingt the <strong> word </strong> </div>
+			      <div className="definition">{this.props.flashcard.definition}</div>
+						<div className="sentence"> This is a sentence usingt the <strong> {this.props.flashcard.word} </strong> </div>
 			    </div>
 
 			  </div>
