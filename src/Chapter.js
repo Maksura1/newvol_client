@@ -1,15 +1,13 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
 
 class Chapter extends Component {
-	// Data
+  // Data
 
-	// Functions
-	// Render
-	render() {
-		return (
-			<li> Chapter 1 </li>
-		)
-	}
+  // Functions
+  // Render
+  render() {
+    return <li>{this.props.chapter.name}</li>;
+  }
 }
 
-export default Chapter
+export default Chapter;
