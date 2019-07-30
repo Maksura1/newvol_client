@@ -8,8 +8,10 @@ class Sidebar extends Component {
 	render() {
 		return (
 			<div id="sidebar">
-         
+         <ul classname ="flashcards" className ="list-unstyled">
+				   <li> Chapter 1 </li>
 
+				 </ul>
 			</div>
 		)
 	}
