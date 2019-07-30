@@ -20,17 +20,39 @@ class Content extends Component {
         definition: "Hey, what up?",
         sentence: "This is another sentence that includes the word"
       }
-    ]
+    ],
+    view: "chapter"
   };
   // Functions
+  changeView = view => {
+    this.setState({ view });
+  };
   // Render
   render() {
     return (
-      <div id="content">
-        <div id="flashcard">
-          {this.state.flashcards.map(f => {
-            return <Flashcard flashcard={f} />;
-          })}
+      <div>
+        <button onClick={() => this.changeView("chapter")}>Read</button>
+        <button onClick={() => this.changeView("flashcards")}>
+          Flashcards
+        </button>
+        <button onClick={() => this.changeView("quizzes")}>Quizzes</button>
+        <div id="content">
+          {this.state.view === "chapter" ? (
+            <div id="chapter">
+              <p>Chapter Text goes here</p>
+            </div>
+          ) : (
+            ""
+          )}
+          {this.state.view === "flashcards" ? (
+            <div id="flashcards">
+              {this.state.flashcards.map(f => {
+                return <Flashcard flashcard={f} />;
+              })}
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     );
