@@ -2,8 +2,22 @@
 	background: blue;
 	color: white;
 	padding: 20px;
+	justify-content: center;
 }
+
 
 .list-unstyled {
 	list-style: none;
+	justify-content: center;
+}
+
+#sidebar li.active {
+	background: white;
+	padding-left: 18px;
+	color: black;
+	font-weight: bold;
+	font-family: fantasy;
+	font-size: 15px;
+	border-radius: 5px;
+	border-color: black;
 }

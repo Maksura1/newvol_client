@@ -9,7 +9,7 @@ class Content extends Component {
 		return (
   <div id="content">
 
-    <div className="container" ontouchstart="this.classList.toggle('hover');">
+    <div className="container" onTouchStart="this.classList.toggle('hover');">
       <div className="card">
 
        <div className="card_front">
