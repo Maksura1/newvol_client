@@ -24,7 +24,7 @@ class Sidebar extends Component {
 	render() {
 		return (
 			<div id="sidebar">
-			   <h3> Flashcards </h3>
+			   <h3> {this.state.workspace} </h3>
          <ul classname ="flashcards" className ="list-unstyled">
 				 {
 					this.state.chapters.map((c) => {
