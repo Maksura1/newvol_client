@@ -9,6 +9,7 @@ class Sidebar extends Component {
     chapters: []
   };
   // Functions
+
   componentWillMount() {
     axios
       .get("http://localhost:4000/api/chapters")
@@ -28,7 +29,7 @@ class Sidebar extends Component {
         <h3>Chapters</h3>
         <ul classname="flashcards" className="list-unstyled">
           {this.state.chapters.map(c => {
-            return <Chapter chapter={c} />;
+            return <Chapter chapter={c} getChapter={this.props.getChapter} />;
           })}
         </ul>
       </div>

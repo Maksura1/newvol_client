@@ -39,7 +39,8 @@ class Content extends Component {
         <div id="content">
           {this.state.view === "chapter" ? (
             <div id="chapter">
-              <p>Chapter Text goes here</p>
+              <h1>{this.props.chapter.name}</h1>
+              <p>{this.props.chapter.text}</p>
             </div>
           ) : (
             ""
