@@ -7,26 +7,27 @@ class Content extends Component {
 	// Render
 	render() {
 		return (
-			<div id="content">
+  <div id="content">
+
     <div className="container" ontouchstart="this.classList.toggle('hover');">
       <div className="card">
-    <div className="card_front">
-      <h1 className="card-symbol">&#128628;</h1>
+
+       <div className="card_front">
+        <h1 className="word">Abhor</h1>
     </div>
 
     <div className="card_back">
-      <h1 className="card-symbol">&#128628;</h1>
-      <div className="card-text">
-        <p>The word <strong>ampersand</strong> is a corruption of the phrase "and per se & (and)", meaning "and intrinsically the word and (represented by the symbol &)".</p>
-      <p>The ampersand can be traced back to the 1st century A.D. and the Old Roman cursive, in which the letters E and T occasionally were written together to form a ligature.</p>
-      </div>
+      <div className="image"> </div>
+      <div className="definition">This is the definition of the word. I need to add more words to test how it workss!
+			adaa dhfaerh akhsdfehn </div>
+			<div className="sentence"> This is a sentence usingt the <strong> word </strong> </div>
     </div>
 
   </div>
 </div>
 
 
-			</div>
+</div>
 		)
 	}
 }
