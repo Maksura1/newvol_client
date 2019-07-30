@@ -1,8 +1,24 @@
 import React, {Component} from 'react'
 import './Sidebar.css';
+import Chapter from './Chapter'
 
 class Sidebar extends Component {
 	// Data
+	state = {
+		workspace: 'Flahshcards',
+		chapters: [
+			{
+				id: 1,
+				name: 'Chapter 1'
+			}, {
+				id: 2,
+				name: 'Chapter 2'
+			}, {
+				id: 3,
+				name: 'Chapter 3'
+			}
+		]
+	}
 	// Functions
 	// Render
 	render() {
@@ -10,11 +26,11 @@ class Sidebar extends Component {
 			<div id="sidebar">
 			   <h3> Flashcards </h3>
          <ul classname ="flashcards" className ="list-unstyled">
-				   <li className="active"> Chapter 1 </li>
-					 <li> Chapter 2 </li>
-					 <li> Chapter 3 </li>
-					 <li> Chapter 4 </li>
-					 <li> Chapter 5 </li>
+				 {
+					this.state.chapters.map((c) => {
+						return <Chapter />
+					})
+				}
          </ul>
 			</div>
 		)
