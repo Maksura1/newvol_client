@@ -1,26 +1,26 @@
 import React, { Component } from "react";
 import "./Sidebar.css";
 import Chapter from "./Chapter";
+import axios from "axios";
 
 class Sidebar extends Component {
   // Data
   state = {
-    chapters: [
-      {
-        id: 1,
-        name: "Chapter 1"
-      },
-      {
-        id: 2,
-        name: "Chapter 2"
-      },
-      {
-        id: 3,
-        name: "Chapter 3"
-      }
-    ]
+    chapters: []
   };
   // Functions
+  componentWillMount() {
+    axios
+      .get("http://localhost:4000/api/chapters")
+      .then(res => {
+        this.setState({
+          chapters: res.data
+        });
+      })
+      .catch(err => {
+        console.log("err", err);
+      });
+  }
   // Render
   render() {
     return (
