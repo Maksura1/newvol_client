@@ -27,7 +27,7 @@ class Sidebar extends Component {
     return (
       <div id="sidebar">
         <h3>Chapters</h3>
-        <ul classname="flashcards" className="list-unstyled">
+        <ul className="flashcards" className="list-unstyled">
           {this.state.chapters.map(c => {
             return <Chapter chapter={c} getChapter={this.props.getChapter} />;
           })}
