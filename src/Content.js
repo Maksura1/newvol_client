@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Content.css";
 import Flashcard from "./Flashcard";
+import Quiz from "./Quiz";
 
 class Content extends Component {
   // Data
@@ -23,6 +24,7 @@ class Content extends Component {
     ],
     view: "chapter"
   };
+
   // Functions
   changeView = view => {
     this.setState({ view });
@@ -48,9 +50,18 @@ class Content extends Component {
           )}
           {this.state.view === "flashcards" ? (
             <div id="flashcards">
+              <h1>{this.props.chapter.name}</h1>
               {this.state.flashcards.map(f => {
                 return <Flashcard flashcard={f} />;
               })}
+            </div>
+          ) : (
+            ""
+          )}
+          {this.state.view === "quizzes" ? (
+            <div id="quizzes">
+              <h1>{this.props.chapter.name}</h1>
+              <Quiz />
             </div>
           ) : (
             ""
