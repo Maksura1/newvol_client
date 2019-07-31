@@ -9,7 +9,8 @@ class Sidebar extends Component {
     chapters: []
   };
   // Functions
-
+  //this function loads the chapters to be displayed on the sidebar
+  //this API holds the id and name of each chapter
   componentWillMount() {
     axios
       .get("http://localhost:4000/api/chapters")
