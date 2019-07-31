@@ -27,6 +27,8 @@ class App extends Component {
   };
 
   // Render
+  //we pass getChapter to sidebar so we can render the names in the sidebar
+  //we pass states of the chapter to the chapters
   render() {
     return (
       <div>

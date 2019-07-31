@@ -24,6 +24,7 @@ class Sidebar extends Component {
       });
   }
   // Render
+  //sidebar has access to getChapter because it has been passed through app
   render() {
     return (
       <div id="sidebar">
