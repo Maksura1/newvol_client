@@ -36,6 +36,7 @@ class Content extends Component {
           Flashcards
         </button>
         <button onClick={() => this.changeView("quizzes")}>Quizzes</button>
+
         <div id="content">
           {this.state.view === "chapter" ? (
             <div id="chapter">

@@ -12,6 +12,7 @@ class App extends Component {
   };
 
   // Functions
+  //getChapter allows you to get one chapter at a time based on ID
   getChapter = id => {
     axios
       .get(`http://localhost:4000/api/chapter/${id}`)
