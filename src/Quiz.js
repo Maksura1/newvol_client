@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { quizData } from "./quizData";
+import "./Quiz.css";
 
 class Quiz extends Component {
   // Data
@@ -12,6 +13,7 @@ class Quiz extends Component {
     isEnd: false
   };
   // Functions
+  //this function assigns data to each state
   loadQuizData = () => {
     // console.log(quizData[0].question)
     this.setState(() => {
@@ -22,6 +24,10 @@ class Quiz extends Component {
       };
     });
   };
+  //this function mounts the Quiz Data
+  componentDidMount() {
+    this.loadQuizData();
+  }
 
   // Render
   render() {
