@@ -40,6 +40,11 @@ class Content extends Component {
           .then(res => {
             console.log("res", res.data.definition);
             console.log("res", res.data.sentence);
+            let node = document.createElement("span");
+            node.classList.add("popup");
+            let textnode = document.createTextNode(res.data.definition);
+            node.appendChild(textnode);
+            e.target.appendChild(node);
           })
           .catch(err => {
             console.log("err", err);
