@@ -18,7 +18,7 @@ class Flashcard extends Component {
             <div className="definition">{this.props.flashcard.definition}</div>
             <div className="sentence">
               {" "}
-              This is a sentence usingt the{" "}
+              This is a sentence using the{" "}
               <strong> {this.props.flashcard.word} </strong>{" "}
             </div>
           </div>

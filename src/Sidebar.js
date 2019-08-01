@@ -13,7 +13,7 @@ class Sidebar extends Component {
   //this API holds the id and name of each chapter
   componentWillMount() {
     axios
-      .get("http://localhost:4000/api/chapters")
+      .get("http://localhost:5000/api/chapters")
       .then(res => {
         this.setState({
           chapters: res.data
