@@ -10,7 +10,7 @@ class Flashcard extends Component {
       <div className="container" onTouchStart="this.classList.toggle('hover');">
         <div className="card">
           <div className="card_front">
-            <h1 className="word">{this.props.flashcard.name}</h1>
+            <h1 className="word">{this.props.flashcard.word}</h1>
           </div>
 
           <div className="card_back">
