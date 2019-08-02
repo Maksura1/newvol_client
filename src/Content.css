@@ -28,6 +28,24 @@ body {
   background-repeat: no-repeat;
 }
 
+#chapter {
+  height: 100vh;
+  width: 100%;
+  background-color: yellow;
+}
+
+#quizzes {
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+}
+
+#flashcards {
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+}
+
 /* CARD STYLING */
 
 .container,

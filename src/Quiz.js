@@ -32,7 +32,7 @@ class Quiz extends Component {
     this.loadQuizData();
   }
 
-  //this function adds one to scor when user answer is equal to my answer
+  //this function adds one to score when user answer is equal to my answer
   nextQuestionHandler = () => {
     // console.log('test')
     const { myAnswer, answer, score } = this.state;
@@ -78,7 +78,7 @@ class Quiz extends Component {
     if (isEnd) {
       return (
         <div className="result">
-          <h3>Game Over your Final score is {this.state.score} points </h3>
+          <h3>Game Over your Final score is {this.state.score}</h3>
           <p>
             The correct answer's for the questions was
             <ul>

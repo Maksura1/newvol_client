@@ -10,16 +10,21 @@ class Flashcard extends Component {
       <div className="container" onTouchStart="this.classList.toggle('hover');">
         <div className="card">
           <div className="card_front">
-            <h1 className="word">{this.props.flashcard.word}</h1>
+            <h1 className="word">{this.props.flashcard.name}</h1>
           </div>
 
           <div className="card_back">
-            <div className="image"> </div>
-            <div className="definition">{this.props.flashcard.definition}</div>
+            <div
+              className="image"
+              style={{ backgroundImage: `url(${this.props.flashcard.image})` }}
+            ></div>
+            <div className="definition">
+              <strong>Definition:</strong> {this.props.flashcard.definition}
+            </div>
             <div className="sentence">
               {" "}
-              This is a sentence using the{" "}
-              <strong> {this.props.flashcard.word} </strong>{" "}
+              <strong>Sentence: </strong>
+              {this.props.flashcard.sentence}
             </div>
           </div>
         </div>
