@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Cantata+One");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.container {
+  /*   height: 100%; */
+  background: url("https://res.cloudinary.com/dat4zjqfy/image/upload/v1564732249/ZdmiMv_gneuss.jpg")
+    no-repeat;
+  box-shadow: 0px 5px 25px 0px rgba(51, 51, 51, 0.28);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #bdc2e8;
+  background-image: linear-gradient(
+    to top,
+    #bdc2e8 0%,
+    #bdc2e8 1%,
+    #e6dee9 100%
+  );
+  background-repeat: no-repeat;
+}
+
+/* CARD STYLING */
+
+.container,
+.card,
+.card_front,
+.card_back {
+  width: 397px;
+  height: 640px;
+  margin: 10px;
+}
+
+@supports (display: flex) {
+  .card_front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card_front .word {
+    margin: 0 0.15em;
+    padding: 10px;
+    border-radius: 5%;
+    border-style: solid;
+    color: black;
+    font-size: 3em;
+  }
+}
+
+.card_front {
+  position: relative;
+  padding: 0 1em;
+}
+
+.card_back {
+  /*   display: none; */
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  padding: 5px;
+}
+
+.card_back .image {
+  margin: 0 0.15em;
+  border-radius: 5px;
+  border-style: solid;
+  margin: 5px;
+  height: 300px;
+  background: url("https://res.cloudinary.com/dat4zjqfy/image/upload/v1564732303/34902fc14c13beeaba1395610bc47590_qz2ysm.jpg");
+  background-color: white;
+  background-size: cover;
+}
+
+.card_back .definition,
+.card_back .sentence {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+/* .card_front > *,
+.card_back > * {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+} */
+
+p:first-of-type {
+  margin-top: 0;
+  padding: 1.5em 0 0;
+  border-top: 8px solid #333;
+}
+
+/* FLIP CARD STYLING */
+.container {
+  perspective: 1000px;
+}
+
+.container:hover .card,
+.container.hover {
+  transform: rotateY(-180deg);
+}
+
+.card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card_front,
+.card_back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card_front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card_back {
+  transform: rotateY(-180deg);
+}
+
+.word {
+  background: yellow;
+  cursor: pointer;
+  position: relative;
+}
+
+.popup {
+  background: white;
+  border: 1px grey solid;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px 8px 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 25px;
+  left: -90px;
+  min-width: 200px;
+}
