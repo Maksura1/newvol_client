@@ -64,18 +64,17 @@ body {
 
 .card_back {
   /*   display: none; */
+  margin: 10px;
   padding: 10px;
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
-  padding: 5px;
 }
 
 .card_back .image {
-  margin: 0 0.15em;
+  margin: 10px;
   border-radius: 5px;
   border-style: solid;
   margin: 5px;
-  height: 300px;
   background: url("https://res.cloudinary.com/dat4zjqfy/image/upload/v1564732303/34902fc14c13beeaba1395610bc47590_qz2ysm.jpg");
   background-color: white;
   background-size: cover;
@@ -87,6 +86,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border-style: solid;
+  background: rgba(76, 175, 80, 0.3);
 }
 
 /* .card_front > *,

@@ -16,7 +16,10 @@ class Flashcard extends Component {
           <div className="card_back">
             <div
               className="image"
-              style={{ backgroundImage: `url(${this.props.flashcard.image})` }}
+              style={{
+                backgroundImage: `url(${this.props.flashcard.image})`,
+                background: "cover"
+              }}
             ></div>
             <div className="definition">
               <strong>Definition:</strong> {this.props.flashcard.definition}
