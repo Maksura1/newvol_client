@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./Flashcard.css";
+import Logo from "./log.png";
+import Bar from "./Bar";
+
 class Flashcard extends Component {
   // Data
   state = {};
@@ -8,7 +11,20 @@ class Flashcard extends Component {
   // Functions
   // Render
   render() {
-    return <div className="container">RENDER FLASHCARD HERE</div>;
+    return (
+      <div>
+        <div id="header">
+          <div id="logo">
+            <img src={Logo} alt="logo" />
+          </div>
+        </div>
+
+        <div id="wrap">
+          <Bar />
+          <div className="container">RENDER FLASHCARD HERE</div>;
+        </div>
+      </div>
+    );
   }
 }
 

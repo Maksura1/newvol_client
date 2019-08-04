@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import Chapter from "./Chapter";
 import axios from "axios";
 
-class Sidebar extends Component {
+class Bar extends Component {
   // Data
   state = {
     chapters: []
@@ -30,7 +30,7 @@ class Sidebar extends Component {
         <h3>Chapters</h3>
         <ul className="chapters" className="list-unstyled">
           {this.state.chapters.map(c => {
-            return <Chapter chapter={c} getChapter={this.props.getChapter} />;
+            return <Chapter chapter={c} />;
           })}
         </ul>
       </div>
@@ -38,4 +38,4 @@ class Sidebar extends Component {
   }
 }
 
-export default Sidebar;
+export default Bar;

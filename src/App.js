@@ -40,7 +40,6 @@ class App extends Component {
         <div id="wrap">
           <Sidebar getChapter={this.getChapter} />
           <Content chapter={this.state.chapter} />
-          />
         </div>
       </div>
     );
