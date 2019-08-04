@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Cantata+One");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
 #content {
   background: #f8f8f8;
   display: grid;
@@ -30,4 +33,24 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: green;
+}
+
+.word {
+  background: yellow;
+  cursor: pointer;
+  position: relative;
+  color: green;
+  font-weight: bold;
+}
+
+.popup {
+  background: white;
+  border: 1px grey solid;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px 8px 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 25px;
+  left: -90px;
+  min-width: 200px;
 }

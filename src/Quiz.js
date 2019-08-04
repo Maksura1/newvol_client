@@ -5,7 +5,7 @@ import "./Quiz.css";
 class Quiz extends Component {
   // Data
   state = {
-    chapter: "",
+    chapter: {},
     currentQuestion: 0,
     myAnswer: null,
     options: [],

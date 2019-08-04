@@ -12,7 +12,7 @@ class App extends Component {
   };
 
   // Functions
-  //getChapter allows you to get one chapter at a time based on ID
+  //renders the chapter when the id of the chapter is passed
   getChapter = id => {
     axios
       .get(`http://localhost:5000/api/chapter/${id}`)
@@ -25,13 +25,9 @@ class App extends Component {
         console.log("err", err);
       });
   };
-  //getWords should connect you to words belonging to a chapter
-
-  //getQuiz function allows you to quiz/questions belonging to a chapter
 
   // Render
-  //we pass getChapter to sidebar so we can render the names in the sidebar
-  //we pass states of the chapter to the chapters
+
   render() {
     return (
       <div>
@@ -44,6 +40,7 @@ class App extends Component {
         <div id="wrap">
           <Sidebar getChapter={this.getChapter} />
           <Content chapter={this.state.chapter} />
+          />
         </div>
       </div>
     );
