@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Card from "./Card";
+import "./Cards.css";
 
 class Cards extends Component {
   // Data
   state = {
-    flashcards: []
+    cards: []
   };
 
   // Functions
@@ -16,7 +17,7 @@ class Cards extends Component {
       .get(`${process.env.REACT_APP_API}/api/words`)
       .then(res => {
         this.setState({
-          flashcards: res.data
+          cards: res.data
         });
       })
       .catch(err => {
@@ -24,19 +25,19 @@ class Cards extends Component {
       });
   }
 
-  //filter Currently not working
-  // componentWillReceiveProps(props) {
-  //   axios
-  //     .get(`${process.env.REACT_APP_API}/api/words?chapter=${props.chapter}`)
-  //     .then(res => {
-  //       this.setState({
-  //         words: res.data
-  //       });
-  //     })
-  //     .catch(err => {
-  //       console.log("err", err);
-  //     });
-  // }
+  //get words by chater
+  componentWillReceiveProps(props) {
+    axios
+      .get(`${process.env.REACT_APP_API}/api/words?chapter=${props.chapter}`)
+      .then(res => {
+        this.setState({
+          cards: res.data
+        });
+      })
+      .catch(err => {
+        console.log("err", err);
+      });
+  }
 
   // Render
   render() {
