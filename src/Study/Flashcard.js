@@ -18,7 +18,7 @@ class Flashcard extends Component {
   //render the chapter when the id of the chapter is passed
   getChapter = () => {
     axios
-      .get(`http://localhost:5000/api/chapters`)
+      .get(`${process.env.REACT_APP_API}/api/chapters`)
       .then(res => {
         this.setState(
           {
@@ -36,7 +36,7 @@ class Flashcard extends Component {
   getFlashcards = id => {
     axios
       .get(
-        `http://localhost:5000/api/words?chapter=${this.state.selectedChapter}`
+        `${process.env.REACT_APP_API}/api/words?chapter=${this.state.selectedChapter}`
       )
       .then(res => {
         this.setState({
@@ -49,7 +49,7 @@ class Flashcard extends Component {
   };
 
   getAllFlashcards = () => {
-    axios.get(`http://localhost:5000/api/words`).then(res => {
+    axios.get(`${process.env.REACT_APP_API}/api/words`).then(res => {
       this.setState(
         {
           words: res.data

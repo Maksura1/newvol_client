@@ -10,9 +10,10 @@ class Side extends Component {
   };
   // Functions
   //load chapter data
+
   componentWillMount() {
     axios
-      .get("http://localhost:5000/api/chapters")
+      .get(`${process.env.REACT_APP_API}/api/chapters`)
       .then(res => {
         this.setState(
           {

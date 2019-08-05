@@ -15,7 +15,7 @@ class App extends Component {
   //renders the chapter when the id of the chapter is passed
   getChapter = id => {
     axios
-      .get(`http://localhost:5000/api/chapter/${id}`)
+      .get(`${process.env.REACT_APP_API}/api/chapter/${id}`)
       .then(res => {
         this.setState({
           chapter: res.data

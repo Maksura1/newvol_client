@@ -22,7 +22,7 @@ class Content extends Component {
         console.log("_id", e.target.id);
         // make axios.get request and replace id with e.target.id
         axios
-          .get(`http://localhost:5000/api/word/${e.target.id}`)
+          .get(`${process.env.REACT_APP_API}/api/word/${e.target.id}`)
           .then(res => {
             console.log("res", res.data.definition);
             console.log("res", res.data.sentence);
