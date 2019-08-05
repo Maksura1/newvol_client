@@ -6,10 +6,10 @@ import axios from "axios";
 class Bar extends Component {
   // Data
   state = {
-    workspace: "Chapters",
     chapters: []
   };
   // Lifecycle
+  //import chapters data and setState
   componentDidMount() {
     axios
       .get(`${process.env.REACT_APP_API}/api/chapters`)
@@ -18,7 +18,7 @@ class Bar extends Component {
         this.setState({
           chapters: res.data
         });
-        this.getCard(res.data[0]._id);
+        this.selectChapter(res.data[0]._id);
         console.log("res.data[0]", res.data[0]);
       })
       .catch(err => {
@@ -27,7 +27,7 @@ class Bar extends Component {
   }
 
   // Functions
-  getCard = id => {
+  selectChapter = id => {
     let chapters = this.state.chapters;
     chapters.forEach(c => delete c.active);
     let chapter = chapters.find(c => c._id === id);
@@ -39,15 +39,14 @@ class Bar extends Component {
   render() {
     return (
       <div id="sidebar">
-        <h2>{this.state.workspace}</h2>
-        <h3>Channels</h3>
+        <h3>Chapters</h3>
         <ul className="list-unstyled">
-          {this.state.channels.map(c => {
+          {this.state.chapters.map(c => {
             return (
-              <Channel
-                channel={c}
+              <Getcard
+                chapter={c}
                 key={c._id}
-                selectChannel={this.selectChannel}
+                selectChapter={this.selectChannel}
               />
             );
           })}
@@ -57,4 +56,4 @@ class Bar extends Component {
   }
 }
 
-export default Sidebar;
+export default Bar;
