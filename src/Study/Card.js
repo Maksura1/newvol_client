@@ -4,12 +4,12 @@ import "./Flashcard.css";
 class Card extends Component {
   // Data
   state = {
-    word: this.props.words
+    card: this.props.card
   };
   // Functions
   componentWillMount() {
-    let word = this.state.word;
-    this.setState({ word });
+    let card = this.state.card;
+    this.setState({ card });
   }
   // Render
   render() {
@@ -21,19 +21,13 @@ class Card extends Component {
         >
           <div className="card">
             <div className="card_front">
-              <h1 className="word">{this.state.word.name}</h1>
+              <h1 className="word">{this.props.card.name}</h1>
             </div>
 
             <div className="card_back">
-              <div className="image"> </div>
-              <div className="definition">
-                This is the definition of the word. I need to add more words to
-                test how it workss! adaa dhfaerh akhsdfehn{" "}
-              </div>
-              <div className="sentence">
-                {" "}
-                This is a sentence usingt the <strong> word </strong>{" "}
-              </div>
+              <div className="image"></div>
+              <div className="definition"> {this.props.card.definition}</div>
+              <div className="sentence"> {this.props.card.sentence}</div>
             </div>
           </div>
         </div>

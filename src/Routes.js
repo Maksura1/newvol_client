@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Flashcard from "./Flashcard";
-import Quiz from "./Quiz";
-import App from "./App";
+import Flashcard from "./Study/Flashcard";
+import Quiz from "./Assess/Quiz";
+import App from "./Main/App";
 
 class Routes extends Component {
   // Data
