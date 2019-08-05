@@ -26,6 +26,25 @@ body {
   background-repeat: no-repeat;
 }
 
+#header {
+  height: 300px;
+  width: 100vw;
+  background-image: url("https://img1.goodfon.com/wallpaper/big/3/de/kniga-cvety-makro.jpg");
+  background-size: cover;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding-top: 50px;
+  padding-left: 15px;
+}
+
+#logo {
+  background-color: lightgrey;
+  width: 200px;
+  border-radius: 50%;
+  border: grey 10px;
+}
+
 /* CARD STYLING */
 
 .container,

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Flashcard from "./Study/Flashcard";
-import Quiz from "./Assess/Quiz";
+import Quiz from "./Assess/Assess";
 import App from "./Main/App";
 
 class Routes extends Component {

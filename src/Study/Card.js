@@ -21,13 +21,13 @@ class Card extends Component {
         >
           <div className="card">
             <div className="card_front">
-              <h1 className="word">{this.props.card.name}</h1>
+              <h1 className="word">{this.props.word.name}</h1>
             </div>
 
             <div className="card_back">
               <div className="image"></div>
-              <div className="definition"> {this.props.card.definition}</div>
-              <div className="sentence"> {this.props.card.sentence}</div>
+              <div className="definition"> {this.props.word.definition}</div>
+              <div className="sentence"> {this.props.word.sentence}</div>
             </div>
           </div>
         </div>

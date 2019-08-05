@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family: Lato, sans-serif;
+}
+
+#header {
+  height: 300px;
+  width: 100vw;
+  background-image: url("https://img1.goodfon.com/wallpaper/big/3/de/kniga-cvety-makro.jpg");
+  background-size: cover;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding-top: 50px;
+  padding-left: 15px;
+}
+
+#logo {
+  background-color: lightgrey;
+  width: 200px;
+  border-radius: 50%;
+  border: grey 10px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-rendering: geometricPrecision;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
+#sidebar {
+  background-color: purple;
+  padding: 10px;
+}

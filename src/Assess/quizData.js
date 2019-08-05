@@ -2,41 +2,37 @@ export const quizData = [
   {
     id: 0,
     chapter: {
-      name: "Chapter 1",
-      text: "This is the chapter text"
+      name: "Chapter 1"
     },
-    question: ` What does the word "LOL" mean ?`,
-    options: [`Lots of Love`, `Laughing Out Loud`, `Lots of laughter`],
-    answer: `New Delhi`
+    question: ` What does the word "apex" mean ?`,
+    options: [`Climax`, `Lowest Point`, `Tired`],
+    answer: `Climax`
   },
   {
     id: 1,
     chapter: {
-      name: "Chapter 2",
-      text: "Hey there, this is chapter two"
+      name: "Chapter 2"
     },
-    question: `Who is the CEO of Tesla Motors?`,
-    options: [`Bill Gates`, `Steve Jobs`, `Elon Musk`],
-    answer: `Elon Musk`
+    question: `Which one of these is an antonym of 'galvanizing'?`,
+    options: [`Demotivate`, `Motivate`, `Excite`],
+    answer: `Demotivate`
   },
   {
     id: 3,
     chapter: {
-      name: "Chapter 3",
-      text: "Hey there, this is chapter three"
+      name: "Chapter 3"
     },
-    question: `Name World's Richest Man?`,
-    options: [`Jeff Bezo`, `Bill Gates`, `Mark Zuckerberg`],
-    answer: `Jeff Bezo`
+    question: `What does the word 'eccentric' mean?`,
+    options: [`Charming`, `Strange`, `Scary`],
+    answer: `Strange`
   },
   {
     id: 4,
     chapter: {
-      name: "Chapter 4",
-      text: "Hey there, this is chapter Four"
+      name: "Chapter 4"
     },
-    question: `World's Longest River?`,
-    options: [`River Nile`, `River Amazon`, `River Godavari`],
-    answer: `River Nile`
+    question: `Which one of these is a synonym of contemplating?`,
+    options: [`Pondering`, `Eating`, `Sweating`],
+    answer: `Pondering`
   }
 ];
