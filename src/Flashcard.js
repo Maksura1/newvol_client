@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Flashcard.css";
 import Bar from "./Bar";
 import Cards from "./Cards";
+import Logo from "./log.png";
 
 class Flashcard extends Component {
   // Data
@@ -18,9 +19,17 @@ class Flashcard extends Component {
   // Render
   render() {
     return (
-      <div id="wrap">
-        <Bar getCards={this.getCards} />
-        <Cards chapter={this.state.chapter} />
+      <div>
+        <div id="header">
+          <div id="logo">
+            <img src={Logo} alt="logo" />
+          </div>
+        </div>
+
+        <div id="wrap">
+          <Bar getCards={this.getCards} />
+          <Cards chapter={this.state.chapter} />
+        </div>
       </div>
     );
   }
