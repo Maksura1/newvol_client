@@ -1,28 +1,26 @@
 import React, { Component } from "react";
 import "./Flashcard.css";
-import Logo from "./log.png";
 import Bar from "./Bar";
+import Cards from "./Cards";
 
 class Flashcard extends Component {
   // Data
-  state = {};
+  //channel = chapter
+  state = {
+    chapter: ""
+  };
   // Functions
-
-  // Functions
+  getCards = id => {
+    this.setState({
+      chapter: id
+    });
+  };
   // Render
   render() {
     return (
-      <div>
-        <div id="header">
-          <div id="logo">
-            <img src={Logo} alt="logo" />
-          </div>
-        </div>
-
-        <div id="wrap">
-          <Bar />
-          <div className="container">RENDER FLASHCARD HERE</div>;
-        </div>
+      <div id="wrap">
+        <Bar getCards={this.getCards} />
+        <Cards chapter={this.state.chapter} />
       </div>
     );
   }

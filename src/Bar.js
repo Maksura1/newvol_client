@@ -1,36 +1,55 @@
 import React, { Component } from "react";
-import "./Sidebar.css";
-import Chapter from "./Chapter";
+import "./Bar.css";
+import Getcard from "./Getcard";
 import axios from "axios";
 
 class Bar extends Component {
   // Data
   state = {
+    workspace: "Chapters",
     chapters: []
   };
-  // Functions
-  //this function loads the chapter data
-  componentWillMount() {
+  // Lifecycle
+  componentDidMount() {
     axios
-      .get("http://localhost:5000/api/chapters")
+      .get(`${process.env.REACT_APP_API}/api/chapters`)
       .then(res => {
+        res.data[0].active = true;
         this.setState({
           chapters: res.data
         });
+        this.getCard(res.data[0]._id);
+        console.log("res.data[0]", res.data[0]);
       })
       .catch(err => {
         console.log("err", err);
       });
   }
+
+  // Functions
+  getCard = id => {
+    let chapters = this.state.chapters;
+    chapters.forEach(c => delete c.active);
+    let chapter = chapters.find(c => c._id === id);
+    chapter.active = true;
+    this.setState({ chapters });
+    this.props.getCards(id);
+  };
   // Render
-  //sidebar has access to getChapter because it has been passed through app
   render() {
     return (
       <div id="sidebar">
-        <h3>Chapters</h3>
-        <ul className="chapters" className="list-unstyled">
-          {this.state.chapters.map(c => {
-            return <Chapter chapter={c} />;
+        <h2>{this.state.workspace}</h2>
+        <h3>Channels</h3>
+        <ul className="list-unstyled">
+          {this.state.channels.map(c => {
+            return (
+              <Channel
+                channel={c}
+                key={c._id}
+                selectChannel={this.selectChannel}
+              />
+            );
           })}
         </ul>
       </div>
@@ -38,4 +57,4 @@ class Bar extends Component {
   }
 }
 
-export default Bar;
+export default Sidebar;
