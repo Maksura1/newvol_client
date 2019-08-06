@@ -49,17 +49,15 @@ body {
 }
 
 iframe {
-  height: 300px;
+  height: 00px;
   width: 100vh;
 }
 
 #logo {
-  background-color: white;
-  width: 150px;
-  height: 150px;
+  background-color: lightgrey;
+  width: 200px;
   border-radius: 50%;
   border: grey 10px;
-  padding: 15px;
 }
 
 #logo img {

@@ -1,0 +1,19 @@
+.navigation {
+  display: inline-block;
+  margin: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+#Modal button {
+  margin: 10px;
+  height: 100px;
+  width: 150px;
+  positon: absolute;
+  background-color: green;
+}
+
+.btn text {
+  text-align: center;
+  text-overflow: inherit;
+}

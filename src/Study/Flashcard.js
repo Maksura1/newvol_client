@@ -78,8 +78,10 @@ class Flashcard extends Component {
     return (
       <div>
         <div id="header">
+          //{" "}
           <div id="logo">
-            <img src={Logo} alt="logo" />
+            // <img src={Logo} alt="logo" />
+            //{" "}
           </div>
         </div>
 

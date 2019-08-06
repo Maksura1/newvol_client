@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Quiz from "./Quiz";
 import "./Home.css";
 import Logo from "./log.png";
-import Side from "./Side";
+import Modal from "./Modal";
 
 class Assess extends Component {
   // Data
@@ -14,27 +14,20 @@ class Assess extends Component {
     return (
       <div>
         <div id="header">
+          //{" "}
           <div id="logo">
-            <img src={Logo} alt="logo" />
+            // <img src={Logo} alt="logo" />
+            //{" "}
           </div>
         </div>
 
         <div id="buttons">
-          <span className="mr-4">
-            <button>
-              <a href="/"> Home </a>
-            </button>
-          </span>
-
-          <span className="mr-4">
-            <button>
-              <a href="/flashcards"> Flashcards </a>
-            </button>
-          </span>
+          <a href="/"> Home </a>
+          <a href="/Flashcards"> Study </a>
         </div>
 
         <div id="wrap">
-          <Side />
+          <Modal />
           <Quiz />
         </div>
       </div>

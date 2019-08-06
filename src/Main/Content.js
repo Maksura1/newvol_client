@@ -53,6 +53,14 @@ class Content extends Component {
     });
   }
 
+  // createPopup = () => {
+  //   let popup;
+  //   if (document.getElementById("myPopup")) {
+  //     popup = document.getElementsById("myPopup");
+  //   }
+  //   popup.classList.toggle("show");
+  // };
+
   componentDidMount() {
     this.getAllChapters();
   }

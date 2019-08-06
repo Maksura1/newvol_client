@@ -3,6 +3,7 @@ import "./App.css";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
 import Logo from "./log.png";
+import Pops from "./Pops";
 import axios from "axios";
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
   };
 
   // Functions
+
   //renders the chapter when the id of the chapter is passed
   getChapter = id => {
     axios
@@ -32,9 +34,6 @@ class App extends Component {
     return (
       <div>
         <div id="header">
-          <div id="logo">
-            <img src={Logo} alt="logo" />
-          </div>
           <div className="name">Poonam</div>
         </div>
 
