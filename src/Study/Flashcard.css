@@ -52,6 +52,11 @@ body {
   margin: 10px;
 }
 
+.flashcardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /* CARD STYLING */
 
 .container,
