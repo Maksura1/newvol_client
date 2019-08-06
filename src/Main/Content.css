@@ -5,6 +5,8 @@
   background: #f8f8f8;
   display: grid;
   grid-template-rows: auto 80px;
+  align-items: center;
+  align-content: center;
 }
 
 html {
@@ -17,24 +19,24 @@ html {
   box-sizing: inherit;
 }
 
-#chapter {
-  height: 100vh;
-  width: 100vw;
-  background-color: yellow;
+#text {
+  height: 600px;
+  width: 700px;
+  background-image: url(https://res.cloudinary.com/dat4zjqfy/image/upload/v1564732303/34902fc14c13beeaba1395610bc47590_qz2ysm.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: bolder;
+  font-family: fantasy;
+  border: black;
+  padding: 15px;
+  margin-left: 30px;
 }
 
-#quizzes {
-  width: 100%;
-  background-color: green;
+h1 {
+  background-image: url(https://res.cloudinary.com/dat4zjqfy/image/upload/v1564732303/34902fc14c13beeaba1395610bc47590_qz2ysm.jpg);
 }
-
-#flashcards {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: green;
-}
-
 .word {
   background: yellow;
   cursor: pointer;

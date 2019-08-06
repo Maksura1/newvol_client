@@ -30,6 +30,7 @@ body {
   height: 300px;
   width: 100vw;
   background-image: url("https://img1.goodfon.com/wallpaper/big/3/de/kniga-cvety-makro.jpg");
+
   background-size: cover;
   background-color: lightgrey;
   background-repeat: no-repeat;
@@ -53,6 +54,7 @@ body {
 }
 
 .flashcardContainer {
+  background-image: url();
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
