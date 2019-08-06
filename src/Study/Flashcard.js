@@ -83,20 +83,20 @@ class Flashcard extends Component {
           </div>
         </div>
 
-        <div id="wrap">
-          <div id="buttons">
-            <span className="mr-4">
-              <button>
-                <a href="/"> Home </a>
-              </button>
-            </span>
-            <span className="mr-4">
-              <button>
-                <a href="/quiz"> Quiz </a>
-              </button>
-            </span>
-          </div>
+        <div id="buttons">
+          <span className="mr-4">
+            <button>
+              <a href="/"> Home </a>
+            </button>
+          </span>
+          <span className="mr-4">
+            <button>
+              <a href="/quiz"> Quiz </a>
+            </button>
+          </span>
+        </div>
 
+        <div id="wrap">
           <div className="chapterSidebar">
             <ul>
               {this.state.chapter.map(c => {

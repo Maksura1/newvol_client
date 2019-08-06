@@ -45,6 +45,13 @@ body {
   border: grey 10px;
 }
 
+#wrap {
+  height: calc(100vh - 300px);
+  display: grid;
+  grid-template-columns: 300px auto;
+  margin: 10px;
+}
+
 /* CARD STYLING */
 
 .container,

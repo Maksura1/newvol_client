@@ -6,7 +6,8 @@ class Content extends Component {
   // Data
   state = {
     chapter: this.props.chapter,
-    chapters: []
+    chapters: [],
+    open: false
   };
 
   // Functions

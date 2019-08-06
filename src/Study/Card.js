@@ -25,7 +25,12 @@ class Card extends Component {
             </div>
 
             <div className="card_back">
-              <div className="image"></div>
+              <div
+                className="image"
+                style={{
+                  backgroundImage: `url(${this.props.word.image})`
+                }}
+              ></div>
               <div className="definition"> {this.props.word.definition}</div>
               <div className="sentence"> {this.props.word.sentence}</div>
             </div>
