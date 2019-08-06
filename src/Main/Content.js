@@ -59,16 +59,14 @@ class Content extends Component {
   // Render
   render() {
     return (
-      <div>
-        <div id="content">
-          <div id="chapter" className="chapter">
-            <h1>{this.props.chapter.name}</h1>
+      <div id="content">
+        <div id="chapter" className="chapter">
+          <h1>{this.props.chapter.name}</h1>
 
-            <div
-              id="text"
-              dangerouslySetInnerHTML={{ __html: this.props.chapter.text }}
-            ></div>
-          </div>
+          <div
+            id="text"
+            dangerouslySetInnerHTML={{ __html: this.props.chapter.text }}
+          ></div>
         </div>
       </div>
     );

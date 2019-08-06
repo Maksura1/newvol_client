@@ -6,13 +6,12 @@ body {
 }
 
 #header {
-  height: 300px;
-  width: 100vw;
-  background-image: url("https://img1.goodfon.com/wallpaper/big/3/de/kniga-cvety-makro.jpg");
+  height: 200px;
+  background-image: url("https://res.cloudinary.com/dat4zjqfy/image/upload/v1564732267/book-wallpapers-28442-4156742_elecf7.jpg");
   background-size: cover;
   background-color: lightgrey;
   background-repeat: no-repeat;
-  margin: 10px;
+  background-position: center right;
   padding-top: 50px;
   padding-left: 15px;
 }
@@ -25,25 +24,17 @@ body {
 }
 
 #wrap {
-  height: calc(100vh - 300px);
+  /* height: calc(100vh - 300px); */
   display: grid;
   grid-template-columns: 300px auto;
-  margin: 10px;
 }
 
 h1 {
-  color: white;
-  text-align: center;
-  text-rendering: geometricPrecision;
+  color: #33383e;
 }
 
 h2 {
   color: white;
   text-align: center;
   text-rendering: optimizeLegibility;
-}
-
-#sidebar {
-  background-color: purple;
-  padding: 10px;
 }

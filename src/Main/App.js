@@ -35,19 +35,12 @@ class App extends Component {
           <div id="logo">
             <img src={Logo} alt="logo" />
           </div>
+          <div className="name">Poonam</div>
         </div>
 
         <div id="buttons">
-          <span className="mr-4">
-            <button>
-              <a href="/flashcards"> Flashcards </a>
-            </button>
-          </span>
-          <span className="mr-4">
-            <button>
-              <a href="/quiz"> Quiz </a>
-            </button>
-          </span>
+          <a href="/flashcards"> Flashcards </a>
+          <a href="/quiz"> Quiz </a>
         </div>
 
         <div id="wrap">

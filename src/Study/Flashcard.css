@@ -27,14 +27,11 @@ body {
 }
 
 #header {
-  height: 300px;
-  width: 100vw;
   background-image: url("https://img1.goodfon.com/wallpaper/big/3/de/kniga-cvety-makro.jpg");
 
   background-size: cover;
   background-color: lightgrey;
   background-repeat: no-repeat;
-  margin: 10px;
   padding-top: 50px;
   padding-left: 15px;
 }
@@ -50,7 +47,6 @@ body {
   height: calc(100vh - 300px);
   display: grid;
   grid-template-columns: 300px auto;
-  margin: 10px;
 }
 
 .flashcardContainer {
@@ -128,7 +124,7 @@ body {
 p:first-of-type {
   margin-top: 0;
   padding: 1.5em 0 0;
-  border-top: 8px solid #333;
+  /* border-top: 8px solid #333; */
 }
 
 /* FLIP CARD STYLING */
