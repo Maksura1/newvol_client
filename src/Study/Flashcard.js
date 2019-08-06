@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./Flashcard.css";
+// import "./Flashcard.css";
+import "../Main/App.css";
 import Logo from "./log.png";
 import axios from "axios";
 import Card from "./Card";
-import Bar from "./Bar";
 import Container from "./Container";
 
 class Flashcard extends Component {
@@ -84,16 +84,8 @@ class Flashcard extends Component {
         </div>
 
         <div id="buttons">
-          <span className="mr-4">
-            <button>
-              <a href="/"> Home </a>
-            </button>
-          </span>
-          <span className="mr-4">
-            <button>
-              <a href="/quiz"> Quiz </a>
-            </button>
-          </span>
+          <a href="/"> Home </a>
+          <a href="/quiz"> Quiz </a>
         </div>
 
         <div id="wrap">

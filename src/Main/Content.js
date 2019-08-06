@@ -37,11 +37,12 @@ class Content extends Component {
         axios
           .get(`${process.env.REACT_APP_API}/api/word/${e.target.id}`)
           .then(res => {
-            console.log("res", res.data.definition);
-            console.log("res", res.data.sentence);
+            console.log("res !!!!!!!!!", res.data);
             let node = document.createElement("span");
             node.classList.add("popup");
-            let textnode = document.createTextNode(res.data.definition);
+            let textnode = document.createTextNode(
+              `${res.data.name}: ${res.data.definition}`
+            );
             node.appendChild(textnode);
             e.target.appendChild(node);
           })
