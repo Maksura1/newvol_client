@@ -38,10 +38,16 @@ class App extends Component {
         </div>
 
         <div id="buttons">
-          <button onClick="window.location.href='localhost:3000/flashcards'">
-            Flashcards
-          </button>
-          <button>Quiz</button>
+          <span className="mr-4">
+            <button>
+              <a href="/flashcards"> Flashcards </a>
+            </button>
+          </span>
+          <span className="mr-4">
+            <button>
+              <a href="/quiz"> Quiz </a>
+            </button>
+          </span>
         </div>
 
         <div id="wrap">

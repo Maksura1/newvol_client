@@ -15,7 +15,7 @@ class Flashcard extends Component {
   };
 
   // Functions
-  //render the chapter when the id of the chapter is passed
+
   getChapter = () => {
     axios
       .get(`${process.env.REACT_APP_API}/api/chapters`)
@@ -84,6 +84,19 @@ class Flashcard extends Component {
         </div>
 
         <div id="wrap">
+          <div id="buttons">
+            <span className="mr-4">
+              <button>
+                <a href="/"> Home </a>
+              </button>
+            </span>
+            <span className="mr-4">
+              <button>
+                <a href="/quiz"> Quiz </a>
+              </button>
+            </span>
+          </div>
+
           <div className="chapterSidebar">
             <ul>
               {this.state.chapter.map(c => {

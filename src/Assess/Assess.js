@@ -20,6 +20,19 @@ class Assess extends Component {
         </div>
 
         <div id="wrap">
+          <div id="buttons">
+            <span className="mr-4">
+              <button>
+                <a href="/"> Home </a>
+              </button>
+            </span>
+
+            <span className="mr-4">
+              <button>
+                <a href="/flashcards"> Flashcards </a>
+              </button>
+            </span>
+          </div>
           <Side />
           <Quiz />
         </div>

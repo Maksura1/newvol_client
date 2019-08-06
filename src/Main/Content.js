@@ -5,12 +5,24 @@ import axios from "axios";
 class Content extends Component {
   // Data
   state = {
-    chapter: this.props.chapter
+    chapter: this.props.chapter,
+    chapters: []
   };
 
   // Functions
+  getAllChapters = () => {
+    axios.get(`${process.env.REACT_APP_API}/api/chapters`).then(res => {
+      this.setState(
+        {
+          chapters: res.data
+        },
+        () => console.log(this.state.words)
+      );
+    });
+  };
 
   //function that gets the id of a word when the word is clicked on
+
   componentWillReceiveProps(props) {
     let words;
     if (document.getElementById("text")) {
@@ -37,6 +49,10 @@ class Content extends Component {
           });
       }
     });
+  }
+
+  componentDidMount() {
+    this.getAllChapters();
   }
 
   // Render
