@@ -4,7 +4,6 @@ import "../Main/App.css";
 import Logo from "./log.png";
 import axios from "axios";
 import Card from "./Card";
-import Container from "./Container";
 
 class Flashcard extends Component {
   // Data

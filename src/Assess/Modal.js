@@ -6,52 +6,31 @@ import axios from "axios";
 class Modal extends Component {
   // Data
   state = {
-    buttons: [
-      {
-        id: 1,
-        name: "Scored a 1/3?",
-        click: "Click Here",
-        title: "Wow you big buffoon! Go back and Study!!"
-      },
-      {
-        id: 2,
-        name: "Scored a 2/3?",
-        click: "Click Here",
-        title: "Not bad but keep studying!"
-      },
-      {
-        id: 3,
-        name: "Scored a 3/3?",
-        click: "Click Here",
-        title: "Boss!"
-      }
-    ]
+    button: this.props.button
   };
   // Functions
+  componentWillMount() {
+    console.log(this.props);
+  }
 
   // Render
   render() {
     return (
       <div id="Modal">
         <div class="navigation">
-          {this.state.buttons.map(b => {
-            return (
-              <nav>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  key={b._id}
-                >
-                  <div class="btn text">
-                    <nav>{b.name}</nav>
-                    <nav>{b.click}</nav>
-                  </div>
-                </button>
-              </nav>
-            );
-          })}
+          <nav>
+            <button
+              type="button"
+              className="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              <div class="btn text">
+                <nav>{this.state.button.name}</nav>
+                <nav>{this.state.button.click}</nav>
+              </div>
+            </button>
+          </nav>
         </div>
         <div
           className="modal fade"
@@ -65,7 +44,7 @@ class Modal extends Component {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id="exampleModalLongTitle">
-                  Modal title
+                  {this.state.button.title}
                 </h5>
                 <button
                   type="button"
