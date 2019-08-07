@@ -18,20 +18,19 @@ class Modal extends Component {
     return (
       <div id="Modal">
         <div class="navigation">
-          <nav>
-            <button
-              type="button"
-              className="btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModalCenter"
-            >
-              <div class="btn text">
-                <nav>{this.state.button.name}</nav>
-                <nav>{this.state.button.click}</nav>
-              </div>
-            </button>
-          </nav>
+          <button
+            type="button"
+            className="front"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          >
+            <div class="btn text">
+              <nav>{this.state.button.name}</nav>
+              <nav>{this.state.button.click}</nav>
+            </div>
+          </button>
         </div>
+
         <div
           className="modal fade"
           id="exampleModalCenter"
@@ -41,21 +40,24 @@ class Modal extends Component {
           aria-hidden="true"
         >
           <div className="modal-dialog modal-dialog-centered" role="document">
-            <div className="modal-content">
+            <div
+              className="back"
+              style={{ backgroundImage: `url(${this.state.button.image})` }}
+            >
               <div className="modal-header">
                 <h5 className="modal-title" id="exampleModalLongTitle">
-                  {this.state.button.title}
+                  Some text or image goes here
                 </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  CLOSE HRE!
-                </button>
               </div>
-              <div className="Defintion"> Definition: Goes here</div>
+              <div className="message">{this.state.button.message}</div>
+              <button
+                type="button"
+                className="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                CLOSE HERE!
+              </button>
             </div>
           </div>
         </div>

@@ -29,6 +29,11 @@ body {
   grid-template-columns: 300px auto;
 }
 
+#side {
+  background: #f3f1ea;
+  color: #333;
+  justify-content: center;
+}
 h1 {
   color: #33383e;
 }

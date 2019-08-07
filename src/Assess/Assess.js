@@ -12,7 +12,7 @@ class Assess extends Component {
         id: 1,
         name: "Scored a 1/3?",
         click: "Click Here",
-        title: "Wow you big buffoon! Go back and Study!!",
+        message: "Wow you big buffoon! Go back and Study!!",
         image:
           "https://res.cloudinary.com/dat4zjqfy/image/upload/v1565135469/memes/a7404b51274120ed8202062ffb341a18_g4emy9.jpg"
       },
@@ -20,7 +20,7 @@ class Assess extends Component {
         id: 2,
         name: "Scored a 2/3?",
         click: "Click Here",
-        title: "Not bad but keep studying!",
+        message: "Not bad but keep studying!",
         image:
           "https://res.cloudinary.com/dat4zjqfy/image/upload/v1565134105/memes/bucket_hct5pe.png"
       },
@@ -28,7 +28,7 @@ class Assess extends Component {
         id: 3,
         name: "Scored a 3/3?",
         click: "Click Here",
-        title: "Boss!",
+        message: "Boss!",
         image:
           "https://res.cloudinary.com/dat4zjqfy/image/upload/v156534049/memes/0Ccwb_qelkbn.jpg"
       }
@@ -41,11 +41,7 @@ class Assess extends Component {
     return (
       <div>
         <div id="header">
-          //{" "}
-          <div id="logo">
-            // <img src={Logo} alt="logo" />
-            //{" "}
-          </div>
+          <h1> NewVol </h1>
         </div>
 
         <div id="buttons">
@@ -54,13 +50,20 @@ class Assess extends Component {
         </div>
 
         <div id="wrap">
-          <div id="modal">
-            {this.state.buttons.map(b => {
-              return <Modal button={b} key={b._id} />;
-            })}
+          <div id="side">
+            <a href="/"> Home </a>
+            <a href="/Flashcards"> Study </a>
           </div>
-          <div id="quiz">
-            <Quiz />
+
+          <div id="quizcontainer">
+            <div id="quiz">
+              <Quiz />
+            </div>
+            <div id="modal">
+              {this.state.buttons.map(b => {
+                return <Modal button={b} key={b._id} />;
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -5,15 +5,42 @@
   padding: 15px;
 }
 
-#Modal button {
+.front {
   margin: 10px;
-  height: 100px;
-  width: 150px;
-  positon: absolute;
-  background-color: green;
+  height: 150px;
+  width: 200px;
+  background-color: #b3dd9f;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.back {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  display: grid;
+  grid-auto-rows: 2fr 1fr;
+}
+#modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modal-content {
+  background-color: blue;
+}
+.navigation {
+  background-color: black;
+  border-radius: 5px;
+  border-width: thick;
 }
 
 .btn text {
   text-align: center;
   text-overflow: inherit;
+}
+
+button .close {
+  background-color: #b3dd9f;
 }
